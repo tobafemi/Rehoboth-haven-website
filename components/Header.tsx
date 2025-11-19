@@ -25,7 +25,7 @@ const navigation = [
   { name: 'Contact', href: '/contact' },
 ]
 
-const phoneNumber = '+44-XXXX-XXXXXX' // Update with actual phone number
+const phoneNumber = '07883 669445'
 
 export default function Header() {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false)

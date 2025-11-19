@@ -1,7 +1,7 @@
 # Rehoboth Haven Design System
 
-**Last Updated:** [Date]  
-**Version:** 1.0.0
+**Last Updated:** December 2024  
+**Version:** 1.1.0
 
 This document outlines the design system, components, and design patterns used across the Rehoboth Haven website. This is a living document that should be updated as the design evolves.
 
@@ -31,7 +31,7 @@ This document outlines the design system, components, and design patterns used a
 - **Accessibility**: Usable by everyone, regardless of ability
 
 ### Design Philosophy
-The Rehoboth Haven website should feel like a trusted care partner - professional yet warm, modern yet approachable. Every design decision should prioritize the user's emotional journey and information needs.
+The Rehoboth Haven website should feel like a trusted care partner - professional yet warm, modern yet approachable. Every design decision should prioritize the user's emotional journey and information needs. As a nurse-led domiciliary care service, the design emphasizes professionalism, trust, and the comfort of receiving care in one's own home.
 
 ---
 
@@ -155,7 +155,12 @@ className="rounded-md bg-secondary px-6 py-3 text-base font-semibold text-foregr
 
 #### Gold CTA Button
 ```tsx
-className="rounded-md bg-gold px-6 py-3 text-base font-semibold text-primary-dark shadow-sm hover:bg-gold-light focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-gold transition-colors"
+className="rounded-md bg-gold px-8 py-4 text-base font-semibold text-primary-dark shadow-lg hover:bg-gold-light focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-gold transition-colors"
+```
+
+#### Hero Secondary Button (White with Border)
+```tsx
+className="rounded-md border-2 border-white bg-white/10 backdrop-blur-sm px-8 py-4 text-base font-semibold text-white hover:bg-white/20 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-white transition-colors"
 ```
 
 ### Cards
@@ -180,20 +185,29 @@ className="rounded-md bg-gold px-6 py-3 text-base font-semibold text-primary-dar
 ## Patterns & Guidelines
 
 ### Hero Sections
-- **Background**: Primary dark (`bg-primary-dark`) with white text
-- **Padding**: `py-16` to `py-24` (64px to 96px)
-- **Content**: Centered, max-width constrained
-- **CTAs**: Primary action (gold) + secondary link
+- **Background**: Full-width image with purple gradient overlay (`bg-gradient-to-r from-primary/90 via-primary/75 to-primary/55`)
+- **Image**: High-quality hero image (`quality={100}`) with Ken Burns animation effect
+- **Height**: `min-h-[600px] sm:min-h-[700px] lg:min-h-[800px]`
+- **Padding**: `py-24 sm:py-32` (96px to 128px vertical)
+- **Content**: Left-aligned, max-width constrained (`max-w-3xl`)
+- **CTAs**: Primary action (gold button) + secondary (white border button)
+- **Badge**: CQC Registered badge with gold accent (`bg-gold/20 text-gold rounded-full`)
+- **Motion**: Subtle zoom and pan animation on background image (20s zoom, 25s pan cycles)
 
 ### Trust Signals
 - **Layout**: 3-column grid on desktop
 - **Icons**: Circular background with primary/gold accent
 - **Text**: Centered, clear hierarchy
+- **Hero Trust Indicators**: Inline flex layout with gold icons, white text
+  - Nurse-Led Management
+  - Care in Your Own Home
+  - CQC Registered
 
 ### Service Cards
 - **Layout**: Grid (1 col mobile, 2-3 cols desktop)
 - **Hover**: Scale transform (`hover:scale-105`)
 - **Image**: Aspect ratio maintained, placeholder gradients
+- **Services**: Personal Care, Medication Support, Companionship, Mobility Assistance, Dementia Care, Respite Care
 
 ### Testimonials
 - **Layout**: Grid with cards
@@ -255,6 +269,14 @@ className="rounded-md bg-gold px-6 py-3 text-base font-semibold text-primary-dar
 - **Fade**: Form success/error messages
 - **Slide**: Mobile menu transitions
 
+### Hero Image Animations
+- **Ken Burns Effect**: Combined zoom and pan animation
+  - **Zoom**: `heroZoom` - 20s ease-in-out infinite alternate (scale 1 to 1.1)
+  - **Pan**: `heroPan` - 25s ease-in-out infinite (subtle translate movement)
+  - **Class**: `hero-image-animated` applied to hero background image
+  - **Performance**: Uses `will-change: transform` for smooth rendering
+- **Content**: No animation on text content (appears immediately for professional feel)
+
 ### Shadows
 - **Elegant**: `0 10px 30px -10px hsl(var(--primary) / 0.15)`
 - **Gold**: `0 4px 20px -4px hsl(var(--gold) / 0.3)`
@@ -266,11 +288,12 @@ className="rounded-md bg-gold px-6 py-3 text-base font-semibold text-primary-dar
 
 ### Reusable Components
 
-#### BookTourForm
-- **Purpose**: Lead capture for tour bookings
+#### RequestConsultationForm
+- **Purpose**: Lead capture for free consultation requests
 - **Fields**: Name, Email, Phone, Preferred Date (optional), Message (optional)
 - **Validation**: Zod schema with React Hook Form
 - **Success State**: Green confirmation message
+- **CTA**: "Request a Free Consultation" (replaces "Book a Tour")
 
 #### DownloadBrochureForm
 - **Purpose**: Lead capture for brochure downloads
@@ -299,6 +322,7 @@ className="rounded-md bg-gold px-6 py-3 text-base font-semibold text-primary-dar
 ### Image Specifications
 - **Format**: WebP preferred, JPG fallback
 - **Optimization**: Next.js Image component with lazy loading
+- **Hero Quality**: Maximum quality (`quality={100}`) for crisp, non-pixelated images
 - **Aspect Ratios**: 
   - Hero images: 16:9
   - Cards: 16:9
@@ -311,10 +335,17 @@ className="rounded-md bg-gold px-6 py-3 text-base font-semibold text-primary-dar
 - **Team Photos**: 400x400px
 - **Logo**: 200x200px (scaled down)
 
+### Hero Image Requirements
+- **File**: `/images/hero-care-home.jpg`
+- **Content**: Warm, welcoming scene showing caregiver providing home care
+- **Overlay**: Purple gradient overlay for text readability and brand consistency
+- **Animation**: Ken Burns effect applied via CSS animations
+
 ### Required Images
 - Logo (`/images/logo.jpg`)
+- Hero Image (`/images/hero-care-home.jpg`) - Caregiver providing home care
 - OG Image (`/images/og-image.jpg`)
-- Facility photos
+- Service images: Personal Care, Medication Support, Companionship, Mobility Assistance, Dementia Care, Respite Care
 - Team member photos
 - Testimonial photos (optional)
 
@@ -339,7 +370,20 @@ className="rounded-md bg-gold px-6 py-3 text-base font-semibold text-primary-dar
 
 ## Changelog
 
-### Version 1.0.0 - [Current Date]
+### Version 1.1.0 - December 2024
+**Hero Section Enhancement & Service Model Update**
+- Added Ken Burns animation effect to hero background image (zoom + pan)
+- Updated hero section to use high-quality image with purple gradient overlay
+- Changed from residential care to domiciliary/home care service model
+- Updated CTAs: "Request a Free Consultation" replaces "Book a Tour"
+- Updated component: RequestConsultationForm replaces BookTourForm
+- Updated trust signals to reflect nurse-led management and home care focus
+- Updated service offerings: Personal Care, Medication Support, Companionship, Mobility Assistance, Dementia Care, Respite Care
+- Improved image quality settings (quality={100}) for crisp, non-pixelated images
+- Removed text fade-in animation for more professional appearance
+- Updated hero messaging: "Nurse-Led Home Care in Medway & Kent"
+
+### Version 1.0.0 - [Initial Date]
 **Initial Design System**
 - Established color palette (purple/gold theme)
 - Defined typography scale
@@ -367,9 +411,10 @@ className="rounded-md bg-gold px-6 py-3 text-base font-semibold text-primary-dar
 ### Questions to Resolve
 - [ ] Finalize team member photos and bios
 - [ ] Confirm actual contact information (phone, address, email)
-- [ ] Source real facility photos
+- [ ] Source real home care service photos
 - [ ] Collect real testimonials with photos
 - [ ] Create actual brochure PDF
+- [ ] Optimize hero image for web (consider WebP format)
 
 ---
 

@@ -11,13 +11,13 @@ export const metadata: Metadata = generatePageSEO({
 })
 
 const contactInfo = {
-  phone: '+44-XXXX-XXXXXX', // Update with actual phone number
-  email: 'info@rehobothhaven.co.uk', // Update with actual email
+  phone: '07883 669445',
+  email: 'rehobothaven@gmail.com',
   address: {
-    street: '', // Update with actual street address
+    street: '99 Academy Drive',
     city: 'Gillingham',
     county: 'Kent',
-    postcode: '', // Update with actual postcode
+    postcode: 'ME7 3EG',
   },
   officeHours: {
     weekdays: '9:00 AM - 5:00 PM',

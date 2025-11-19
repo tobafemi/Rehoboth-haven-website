@@ -7,13 +7,14 @@ export const localBusinessSchema: WithContext<LocalBusiness> = {
   name: 'Rehoboth Haven Care',
   description: 'Nurse-led domiciliary care agency providing expert, personalised home care in Medway and Kent. Managed by Registered Nurses with NHS experience. CQC registered.',
   url: 'https://rehobothhaven.co.uk',
-  telephone: '+44-XXXX-XXXXXX', // Update with actual phone number
+  telephone: '+447883669445',
+  email: 'rehobothaven@gmail.com',
   address: {
     '@type': 'PostalAddress',
-    streetAddress: '', // Update with actual address
+    streetAddress: '99 Academy Drive',
     addressLocality: 'Gillingham',
     addressRegion: 'Kent',
-    postalCode: '', // Update with actual postcode
+    postalCode: 'ME7 3EG',
     addressCountry: 'GB',
   },
   geo: {

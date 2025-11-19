@@ -44,15 +44,16 @@ export default function RequestConsultationForm({
     setSubmitError(null)
 
     try {
-      // TODO: Replace with actual API endpoint
-      // const response = await fetch('/api/request-consultation', {
-      //   method: 'POST',
-      //   headers: { 'Content-Type': 'application/json' },
-      //   body: JSON.stringify(data),
-      // })
+      const response = await fetch('/api/request-consultation', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify(data),
+      })
 
-      // Simulate API call
-      await new Promise(resolve => setTimeout(resolve, 1000))
+      if (!response.ok) {
+        const errorData = await response.json()
+        throw new Error(errorData.error || 'Failed to submit form')
+      }
 
       setSubmitSuccess(true)
       reset()
@@ -62,7 +63,11 @@ export default function RequestConsultationForm({
         setSubmitSuccess(false)
       }, 5000)
     } catch (error) {
-      setSubmitError('Something went wrong. Please try again or call us directly.')
+      setSubmitError(
+        error instanceof Error 
+          ? error.message 
+          : 'Something went wrong. Please try again or call us directly at 07883 669445.'
+      )
     } finally {
       setIsSubmitting(false)
     }

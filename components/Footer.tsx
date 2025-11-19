@@ -22,9 +22,9 @@ const navigation = {
 }
 
 const contactInfo = {
-  phone: '+44-XXXX-XXXXXX', // Update with actual phone number
-  email: 'info@rehobothhaven.co.uk', // Update with actual email
-  address: 'Gillingham, Kent', // Update with actual address
+  phone: '07883 669445',
+  email: 'rehobothaven@gmail.com',
+  address: '99 Academy Drive, ME7 3EG, Gillingham',
 }
 
 export default function Footer() {
