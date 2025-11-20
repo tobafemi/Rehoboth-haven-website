@@ -42,19 +42,19 @@ export default function RequestConsultationForm({
   const onSubmit = async (data: ConsultationFormData) => {
     setIsSubmitting(true)
     setSubmitError(null)
-
+  
     try {
       const response = await fetch('/api/request-consultation', {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify(data),
       })
-
+  
       if (!response.ok) {
         const errorData = await response.json()
         throw new Error(errorData.error || 'Failed to submit form')
       }
-
+  
       setSubmitSuccess(true)
       reset()
       

@@ -168,20 +168,18 @@ export default function ContactPage() {
                 We provide home care services across Medway (Rochester, Chatham, Gillingham, Strood, Rainham) and wider Kent
               </p>
             </div>
-            <div className="rounded-lg overflow-hidden shadow-lg bg-gray-200" style={{ height: '400px' }}>
-              {/* Google Maps embed - Replace with actual embed code */}
-              <div className="w-full h-full flex items-center justify-center bg-gradient-to-br from-primary/20 to-primary/5">
-                <div className="text-center">
-                  <svg className="h-16 w-16 text-primary/30 mx-auto mb-4" fill="none" viewBox="0 0 24 24" strokeWidth="1.5" stroke="currentColor">
-                    <path strokeLinecap="round" strokeLinejoin="round" d="M15 10.5a3 3 0 11-6 0 3 3 0 016 0z" />
-                    <path strokeLinecap="round" strokeLinejoin="round" d="M19.5 10.5c0 7.142-7.5 11.25-7.5 11.25S4.5 17.642 4.5 10.5a7.5 7.5 0 1115 0z" />
-                  </svg>
-                  <p className="text-muted-foreground">Map will be embedded here</p>
-                  <p className="text-sm text-muted-foreground mt-2">
-                    {fullAddress || `${contactInfo.address.city}, ${contactInfo.address.county}`}
-                  </p>
-                </div>
-              </div>
+            <div className="rounded-lg overflow-hidden shadow-lg bg-white">
+              <iframe
+                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2490.5!2d0.548252!3d51.388497!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zNTHCsDIzJzE4LjYiTiAwwrAzMic1My43IkU!5e0!3m2!1sen!2suk!4v1234567890"
+                width="100%"
+                height="450"
+                style={{ border: 0 }}
+                allowFullScreen
+                loading="lazy"
+                referrerPolicy="no-referrer-when-downgrade"
+                title="Rehoboth Haven Care Service Area - Medway and Kent"
+                className="w-full"
+              />
             </div>
           </div>
         </section>

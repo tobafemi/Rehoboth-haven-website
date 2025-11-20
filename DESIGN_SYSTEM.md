@@ -1,7 +1,7 @@
 # Rehoboth Haven Design System
 
-**Last Updated:** December 2024  
-**Version:** 1.1.0
+**Last Updated:** January 2025  
+**Version:** 1.2.0
 
 This document outlines the design system, components, and design patterns used across the Rehoboth Haven website. This is a living document that should be updated as the design evolves.
 
@@ -369,6 +369,15 @@ className="rounded-md border-2 border-white bg-white/10 backdrop-blur-sm px-8 py
 ---
 
 ## Changelog
+
+### Version 1.2.0 - January 2025
+**Blogs & News Feature**
+- Added "Blogs & News" section (`/blogs`)
+- Created individual blog post pages with SEO optimization
+- Updated Header navigation to include "Blogs" dropdown menu
+- Updated Footer to include links to blog posts and main blogs page
+- Implemented responsive grid layout for blog cards
+- Added "Press Releases" section placeholder
 
 ### Version 1.1.0 - December 2024
 **Hero Section Enhancement & Service Model Update**

@@ -15,6 +15,15 @@ const navigation = {
     { name: 'Areas We Cover', href: '/areas-we-cover' },
     { name: 'Meet The Team', href: '/meet-the-team' },
   ],
+  blogs: [
+    { name: 'Blogs & News', href: '/blogs' },
+    { name: 'Can I Afford In-Home Care?', href: '/blogs/can-i-afford-in-home-care-kent-cost-guide-2025' },
+    { name: 'Home Care vs. Care Homes', href: '/blogs/home-care-vs-care-homes-kent-comparison' },
+    { name: 'What Is Included in In-Home Care?', href: '/blogs/what-is-included-in-home-care-kent-guide' },
+    { name: 'How to Get Home Care Funding', href: '/blogs/how-to-get-home-care-funding-kent-step-by-step' },
+    { name: 'Signs Your Loved One Needs Care', href: '/blogs/signs-loved-one-needs-home-care-red-flags' },
+    { name: 'A Day in the Life of a Carer', href: '/blogs/what-does-caregiver-do-day-in-life-rehoboth-haven-carer' },
+  ],
   contact: [
     { name: 'Contact Us', href: '/contact' },
     { name: 'Request Consultation', href: '/contact#consultation' },
@@ -106,6 +115,21 @@ export default function Footer() {
             </div>
             <div className="md:grid md:grid-cols-2 md:gap-8">
               <div>
+                <h3 className="text-sm font-semibold uppercase tracking-wider">Blogs & News</h3>
+                <ul role="list" className="mt-4 space-y-4">
+                  {navigation.blogs.map((item) => (
+                    <li key={item.name}>
+                      <Link
+                        href={item.href}
+                        className="text-base text-gray-300 hover:text-white transition-colors"
+                      >
+                        {item.name}
+                      </Link>
+                    </li>
+                  ))}
+                </ul>
+              </div>
+              <div className="mt-10 md:mt-0">
                 <h3 className="text-sm font-semibold uppercase tracking-wider">Contact</h3>
                 <ul role="list" className="mt-4 space-y-4">
                   {navigation.contact.map((item) => (

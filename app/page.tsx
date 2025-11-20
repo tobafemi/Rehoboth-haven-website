@@ -5,6 +5,7 @@ import { generatePageSEO } from '@/lib/seo'
 import { localBusinessSchema } from '@/lib/schema'
 import RequestConsultationForm from '@/components/RequestConsultationForm'
 import Testimonials from '@/components/Testimonials'
+import ServiceCardHome from '@/components/ServiceCardHome'
 
 export const metadata: Metadata = generatePageSEO({
   title: 'Rehoboth Haven Care: Nurse-Led Home Care in Medway & Kent',
@@ -46,7 +47,7 @@ const services = [
     name: 'Respite Care',
     description: 'Providing short-term relief for family carers, allowing them to rest and recharge.',
     href: '/respite-care',
-    image: '/images/respite-care.jpg',
+    image: '/images/respite.jpg',
   },
 ]
 
@@ -205,32 +206,8 @@ export default function HomePage() {
           </div>
 
           <div className="grid gap-8 md:grid-cols-2 lg:grid-cols-3">
-            {services.map((service) => (
-              <Link
-                key={service.name}
-                href={service.href}
-                className="group relative overflow-hidden rounded-lg bg-white shadow-lg transition-transform hover:scale-105"
-              >
-                <div className="aspect-w-16 aspect-h-9 bg-gray-200">
-                  <div className="h-48 bg-gradient-to-br from-primary/20 to-primary/5 flex items-center justify-center">
-                    <svg className="h-16 w-16 text-primary/30" fill="none" viewBox="0 0 24 24" strokeWidth="1.5" stroke="currentColor">
-                      <path strokeLinecap="round" strokeLinejoin="round" d="M2.25 12l8.954-8.955c.44-.439 1.152-.439 1.591 0L21.75 12M4.5 9.75v10.125c0 .621.504 1.125 1.125 1.125H9.75v-4.875c0-.621.504-1.125 1.125-1.125h2.25c.621 0 1.125.504 1.125 1.125V21h4.125c.621 0 1.125-.504 1.125-1.125V9.75M8.25 21h8.25" />
-                    </svg>
-                  </div>
-                </div>
-                <div className="p-6">
-                  <h3 className="text-xl font-semibold text-foreground group-hover:text-primary transition-colors">
-                    {service.name}
-                  </h3>
-                  <p className="mt-2 text-muted-foreground">{service.description}</p>
-                  <span className="mt-4 inline-flex items-center text-primary font-medium group-hover:underline">
-                    Learn more
-                    <svg className="ml-2 h-4 w-4" fill="none" viewBox="0 0 24 24" strokeWidth="2" stroke="currentColor">
-                      <path strokeLinecap="round" strokeLinejoin="round" d="M13.5 4.5L21 12m0 0l-7.5 7.5M21 12H3" />
-                    </svg>
-                  </span>
-                </div>
-              </Link>
+            {services.map((service, index) => (
+              <ServiceCardHome key={service.name} service={service} index={index} />
             ))}
           </div>
 

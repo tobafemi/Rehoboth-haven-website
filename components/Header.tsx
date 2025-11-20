@@ -19,6 +19,18 @@ const navigation = [
       { name: 'Respite Care', href: '/respite-care' },
     ]
   },
+  { 
+    name: 'Blogs', 
+    href: '/blogs',
+    children: [
+      { name: 'Can I Afford In-Home Care in Kent?', href: '/blogs/can-i-afford-in-home-care-kent-cost-guide-2025' },
+      { name: 'Home Care vs. Care Homes', href: '/blogs/home-care-vs-care-homes-kent-comparison' },
+      { name: 'What Is Included in In-Home Care?', href: '/blogs/what-is-included-in-home-care-kent-guide' },
+      { name: 'How to Get Home Care Funding', href: '/blogs/how-to-get-home-care-funding-kent-step-by-step' },
+      { name: 'Signs Your Loved One Needs Home Care', href: '/blogs/signs-loved-one-needs-home-care-red-flags' },
+      { name: 'A Day in the Life of a Carer', href: '/blogs/what-does-caregiver-do-day-in-life-rehoboth-haven-carer' },
+    ]
+  },
   { name: 'Why Choose Us', href: '/why-choose-us' },
   { name: 'Areas We Cover', href: '/areas-we-cover' },
   { name: 'Meet The Team', href: '/meet-the-team' },
@@ -30,8 +42,11 @@ const phoneNumber = '07883 669445'
 export default function Header() {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false)
   const [careMenuOpen, setCareMenuOpen] = useState(false)
+  const [blogsMenuOpen, setBlogsMenuOpen] = useState(false)
   const [mobileCareMenuOpen, setMobileCareMenuOpen] = useState(false)
+  const [mobileBlogsMenuOpen, setMobileBlogsMenuOpen] = useState(false)
   const careMenuTimeoutRef = useRef<NodeJS.Timeout | null>(null)
+  const blogsMenuTimeoutRef = useRef<NodeJS.Timeout | null>(null)
 
   const handleToggleMenu = () => {
     setMobileMenuOpen(!mobileMenuOpen)
@@ -40,10 +55,17 @@ export default function Header() {
   const handleCloseMenu = () => {
     setMobileMenuOpen(false)
     setMobileCareMenuOpen(false)
+    setMobileBlogsMenuOpen(false)
   }
 
   const handleCareMenuToggle = () => {
     setMobileCareMenuOpen(!mobileCareMenuOpen)
+    if (mobileBlogsMenuOpen) setMobileBlogsMenuOpen(false)
+  }
+
+  const handleBlogsMenuToggle = () => {
+    setMobileBlogsMenuOpen(!mobileBlogsMenuOpen)
+    if (mobileCareMenuOpen) setMobileCareMenuOpen(false)
   }
 
   const handleCareMenuEnter = () => {
@@ -52,6 +74,7 @@ export default function Header() {
       careMenuTimeoutRef.current = null
     }
     setCareMenuOpen(true)
+    setBlogsMenuOpen(false)
   }
 
   const handleCareMenuLeave = () => {
@@ -60,10 +83,28 @@ export default function Header() {
     }, 150) // Small delay to allow mouse movement
   }
 
+  const handleBlogsMenuEnter = () => {
+    if (blogsMenuTimeoutRef.current) {
+      clearTimeout(blogsMenuTimeoutRef.current)
+      blogsMenuTimeoutRef.current = null
+    }
+    setBlogsMenuOpen(true)
+    setCareMenuOpen(false)
+  }
+
+  const handleBlogsMenuLeave = () => {
+    blogsMenuTimeoutRef.current = setTimeout(() => {
+      setBlogsMenuOpen(false)
+    }, 150) // Small delay to allow mouse movement
+  }
+
   useEffect(() => {
     return () => {
       if (careMenuTimeoutRef.current) {
         clearTimeout(careMenuTimeoutRef.current)
+      }
+      if (blogsMenuTimeoutRef.current) {
+        clearTimeout(blogsMenuTimeoutRef.current)
       }
     }
   }, [])
@@ -92,12 +133,19 @@ export default function Header() {
           <div className="hidden lg:flex lg:items-center lg:space-x-8">
             {navigation.map((item) => {
               if (item.children) {
+                const isCareMenu = item.name === 'Our Care'
+                const isBlogsMenu = item.name === 'Blogs'
+                const menuEnterHandler = isCareMenu ? handleCareMenuEnter : isBlogsMenu ? handleBlogsMenuEnter : undefined
+                const menuLeaveHandler = isCareMenu ? handleCareMenuLeave : isBlogsMenu ? handleBlogsMenuLeave : undefined
+                const menuOpen = isCareMenu ? careMenuOpen : isBlogsMenu ? blogsMenuOpen : false
+                const allItemsLabel = isCareMenu ? 'All Services' : isBlogsMenu ? 'All Articles' : 'View All'
+                
                 return (
                   <div
                     key={item.name}
                     className="relative"
-                    onMouseEnter={handleCareMenuEnter}
-                    onMouseLeave={handleCareMenuLeave}
+                    onMouseEnter={menuEnterHandler}
+                    onMouseLeave={menuLeaveHandler}
                   >
                     <Link
                       href={item.href}
@@ -114,11 +162,11 @@ export default function Header() {
                         <path strokeLinecap="round" strokeLinejoin="round" d="M19.5 8.25l-7.5 7.5-7.5-7.5" />
                       </svg>
                     </Link>
-                    {careMenuOpen && (
+                    {menuOpen && (
                       <div 
                         className="absolute left-0 pt-2 w-56 z-50"
-                        onMouseEnter={handleCareMenuEnter}
-                        onMouseLeave={handleCareMenuLeave}
+                        onMouseEnter={menuEnterHandler}
+                        onMouseLeave={menuLeaveHandler}
                       >
                         <div className="rounded-md bg-white shadow-lg ring-1 ring-black ring-opacity-5">
                           <div className="py-1" role="menu" aria-orientation="vertical">
@@ -127,7 +175,7 @@ export default function Header() {
                               className="block px-4 py-2 text-sm font-semibold text-primary border-b border-gray-200 hover:bg-gray-50 transition-colors"
                               role="menuitem"
                             >
-                              All Services
+                              {allItemsLabel}
                             </Link>
                             {item.children.map((child) => (
                               <Link
@@ -248,19 +296,25 @@ export default function Header() {
           <div className="space-y-1 px-2 pb-3 pt-2">
             {navigation.map((item) => {
               if (item.children) {
+                const isCareMenu = item.name === 'Our Care'
+                const isBlogsMenu = item.name === 'Blogs'
+                const menuToggleHandler = isCareMenu ? handleCareMenuToggle : isBlogsMenu ? handleBlogsMenuToggle : undefined
+                const menuOpen = isCareMenu ? mobileCareMenuOpen : isBlogsMenu ? mobileBlogsMenuOpen : false
+                const allItemsLabel = isCareMenu ? 'All Services' : isBlogsMenu ? 'All Articles' : 'View All'
+                
                 return (
                   <div key={item.name}>
                     <button
                       type="button"
-                      onClick={handleCareMenuToggle}
+                      onClick={menuToggleHandler}
                       className="flex w-full items-center justify-between rounded-md px-3 py-2 text-base font-medium text-foreground hover:bg-gray-50 hover:text-primary transition-colors"
-                      aria-expanded={mobileCareMenuOpen}
+                      aria-expanded={menuOpen}
                     >
                       {item.name}
                       <svg
                         className={cn(
                           'h-5 w-5 transition-transform',
-                          mobileCareMenuOpen ? 'rotate-180' : ''
+                          menuOpen ? 'rotate-180' : ''
                         )}
                         fill="none"
                         viewBox="0 0 24 24"
@@ -270,14 +324,14 @@ export default function Header() {
                         <path strokeLinecap="round" strokeLinejoin="round" d="M19.5 8.25l-7.5 7.5-7.5-7.5" />
                       </svg>
                     </button>
-                    {mobileCareMenuOpen && (
+                    {menuOpen && (
                       <div className="ml-4 mt-1 space-y-1">
                         <Link
                           href={item.href}
                           className="block rounded-md px-3 py-2 text-sm font-semibold text-primary hover:bg-gray-50 transition-colors"
                           onClick={handleCloseMenu}
                         >
-                          All Services
+                          {allItemsLabel}
                         </Link>
                         {item.children.map((child) => (
                           <Link
