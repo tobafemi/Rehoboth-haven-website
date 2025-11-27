@@ -9,7 +9,7 @@ import ServiceCardHome from '@/components/ServiceCardHome'
 
 export const metadata: Metadata = generatePageSEO({
   title: 'Rehoboth Haven Care: Nurse-Led Home Care in Medway & Kent',
-  description: 'Expert, personalised domiciliary care in Medway and Kent. Managed by Registered Nurses with NHS experience. CQC registered. Bringing NHS standards of excellence to your home.',
+  description: 'Expert, personalised domiciliary care in Medway and Kent. Managed by Registered Nurses with NHS experience. Bringing NHS standards of excellence to your home.',
 })
 
 const services = [
@@ -100,12 +100,12 @@ export default function HomePage() {
         {/* Content */}
         <div className="relative z-20 mx-auto max-w-7xl px-4 py-24 sm:px-6 sm:py-32 lg:px-8 w-full">
           <div className="max-w-3xl">
-            {/* CQC Registered Badge */}
+            {/* CQC Registration Pending Badge */}
             <div className="mb-6 inline-flex items-center gap-2 bg-gold/20 text-gold px-4 py-2 rounded-full backdrop-blur-sm">
               <svg className="h-4 w-4" fill="none" viewBox="0 0 24 24" strokeWidth="2" stroke="currentColor">
                 <path strokeLinecap="round" strokeLinejoin="round" d="M9 12.75L11.25 15 15 9.75m-3-7.036A11.959 11.959 0 013.598 6 11.99 11.99 0 003 9.749c0 5.592 3.824 10.29 9 11.623 5.176-1.332 9-6.03 9-11.622 0-1.31-.21-2.571-.598-3.751h-.152c-3.196 0-6.1-1.248-8.25-3.285z" />
               </svg>
-              <span className="text-sm font-semibold">CQC Registered Domiciliary Care</span>
+              <span className="text-sm font-semibold">CQC Registration Pending</span>
             </div>
 
             {/* Main Heading */}
@@ -137,7 +137,7 @@ export default function HomePage() {
                 <svg className="h-5 w-5 text-gold" fill="none" viewBox="0 0 24 24" strokeWidth="2" stroke="currentColor">
                   <path strokeLinecap="round" strokeLinejoin="round" d="M9 12.75L11.25 15 15 9.75m-3-7.036A11.959 11.959 0 013.598 6 11.99 11.99 0 003 9.749c0 5.592 3.824 10.29 9 11.623 5.176-1.332 9-6.03 9-11.622 0-1.31-.21-2.571-.598-3.751h-.152c-3.196 0-6.1-1.248-8.25-3.285z" />
                 </svg>
-                <span className="text-sm font-medium">CQC Registered</span>
+                <span className="text-sm font-medium">CQC Registration Pending</span>
               </div>
             </div>
 
@@ -170,8 +170,8 @@ export default function HomePage() {
                   <path strokeLinecap="round" strokeLinejoin="round" d="M9 12.75L11.25 15 15 9.75m-3-7.036A11.959 11.959 0 013.598 6 11.99 11.99 0 003 9.749c0 5.592 3.824 10.29 9 11.623 5.176-1.332 9-6.03 9-11.622 0-1.31-.21-2.571-.598-3.751h-.152c-3.196 0-6.1-1.248-8.25-3.285z" />
                 </svg>
               </div>
-              <h3 className="text-lg font-semibold text-foreground">CQC Registered</h3>
-              <p className="mt-2 text-sm text-muted-foreground">Fully compliant with Care Quality Commission standards</p>
+              <h3 className="text-lg font-semibold text-foreground">CQC Registration Pending</h3>
+              <p className="mt-2 text-sm text-muted-foreground">Registration application submitted, awaiting approval</p>
             </div>
             <div className="text-center">
               <div className="mx-auto h-12 w-12 rounded-full bg-primary/10 flex items-center justify-center mb-4">

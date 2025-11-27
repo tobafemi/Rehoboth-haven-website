@@ -5,7 +5,7 @@ export const localBusinessSchema: WithContext<LocalBusiness> = {
   '@type': 'LocalBusiness',
   '@id': 'https://rehobothhaven.co.uk/#organization',
   name: 'Rehoboth Haven Care',
-  description: 'Nurse-led domiciliary care agency providing expert, personalised home care in Medway and Kent. Managed by Registered Nurses with NHS experience. CQC registered.',
+  description: 'Nurse-led domiciliary care agency providing expert, personalised home care in Medway and Kent. Managed by Registered Nurses with NHS experience.',
   url: 'https://rehobothhaven.co.uk',
   telephone: '+447883669445',
   email: 'rehobothaven@gmail.com',

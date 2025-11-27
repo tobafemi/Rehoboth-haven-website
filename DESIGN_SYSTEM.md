@@ -191,7 +191,7 @@ className="rounded-md border-2 border-white bg-white/10 backdrop-blur-sm px-8 py
 - **Padding**: `py-24 sm:py-32` (96px to 128px vertical)
 - **Content**: Left-aligned, max-width constrained (`max-w-3xl`)
 - **CTAs**: Primary action (gold button) + secondary (white border button)
-- **Badge**: CQC Registered badge with gold accent (`bg-gold/20 text-gold rounded-full`)
+- **Badge**: CQC Registration Pending badge with gold accent (`bg-gold/20 text-gold rounded-full`)
 - **Motion**: Subtle zoom and pan animation on background image (20s zoom, 25s pan cycles)
 
 ### Trust Signals
@@ -201,7 +201,7 @@ className="rounded-md border-2 border-white bg-white/10 backdrop-blur-sm px-8 py
 - **Hero Trust Indicators**: Inline flex layout with gold icons, white text
   - Nurse-Led Management
   - Care in Your Own Home
-  - CQC Registered
+  - CQC Registration Pending
 
 ### Service Cards
 - **Layout**: Grid (1 col mobile, 2-3 cols desktop)

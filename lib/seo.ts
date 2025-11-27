@@ -4,7 +4,7 @@ import type { Metadata } from 'next'
 export const defaultSEO: DefaultSeoProps = {
   defaultTitle: 'Rehoboth Haven Care: Nurse-Led Home Care in Medway & Kent',
   titleTemplate: '%s | Rehoboth Haven Care',
-  description: 'Expert, personalised domiciliary care in Medway and Kent. Managed by Registered Nurses with NHS experience. CQC registered. Bringing NHS standards of excellence to your home.',
+  description: 'Expert, personalised domiciliary care in Medway and Kent. Managed by Registered Nurses with NHS experience. Bringing NHS standards of excellence to your home.',
   canonical: 'https://rehobothhaven.co.uk',
   openGraph: {
     type: 'website',
@@ -12,7 +12,7 @@ export const defaultSEO: DefaultSeoProps = {
     url: 'https://rehobothhaven.co.uk',
     siteName: 'Rehoboth Haven Care',
     title: 'Rehoboth Haven Care: Nurse-Led Home Care in Medway & Kent',
-    description: 'Expert, personalised domiciliary care in Medway and Kent. Managed by Registered Nurses with NHS experience. CQC registered.',
+    description: 'Expert, personalised domiciliary care in Medway and Kent. Managed by Registered Nurses with NHS experience.',
     images: [
       {
         url: 'https://rehobothhaven.co.uk/og-image.jpg',

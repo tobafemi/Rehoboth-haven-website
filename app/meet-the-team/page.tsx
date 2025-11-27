@@ -238,7 +238,7 @@ export default function MeetTheTeamPage() {
               </div>
               <h3 className="text-lg font-semibold text-foreground mb-2">High Standards</h3>
               <p className="text-sm text-muted-foreground">
-                Maintaining CQC compliance and exceeding regulatory requirements
+                Operating to CQC standards and preparing for registration approval
               </p>
             </div>
 

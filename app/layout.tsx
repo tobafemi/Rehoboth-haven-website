@@ -16,7 +16,7 @@ export const metadata: Metadata = {
     default: 'Rehoboth Haven Care: Nurse-Led Home Care in Medway & Kent',
     template: '%s | Rehoboth Haven Care',
   },
-  description: 'Expert, personalised domiciliary care in Medway and Kent. Managed by Registered Nurses with NHS experience. CQC registered. Bringing NHS standards of excellence to your home.',
+  description: 'Expert, personalised domiciliary care in Medway and Kent. Managed by Registered Nurses with NHS experience. Bringing NHS standards of excellence to your home.',
   keywords: ['domiciliary care Medway', 'home care Kent', 'nurse-led care', 'home care Gillingham', 'home care Rochester', 'home care Chatham', 'dementia care at home Medway', 'in-home care Kent', 'domiciliary care agency Medway', 'personal care at home'],
   authors: [{ name: 'Rehoboth Haven Care' }],
   creator: 'Rehoboth Haven Care',
@@ -26,7 +26,7 @@ export const metadata: Metadata = {
     url: 'https://rehobothhaven.co.uk',
     siteName: 'Rehoboth Haven Care',
     title: 'Rehoboth Haven Care: Nurse-Led Home Care in Medway & Kent',
-    description: 'Expert, personalised domiciliary care in Medway and Kent. Managed by Registered Nurses with NHS experience. CQC registered.',
+    description: 'Expert, personalised domiciliary care in Medway and Kent. Managed by Registered Nurses with NHS experience.',
     images: [
       {
         url: '/og-image.jpg',
@@ -39,7 +39,7 @@ export const metadata: Metadata = {
   twitter: {
     card: 'summary_large_image',
     title: 'Rehoboth Haven Care: Nurse-Led Home Care in Medway & Kent',
-    description: 'Expert, personalised domiciliary care in Medway and Kent. Managed by Registered Nurses with NHS experience. CQC registered.',
+    description: 'Expert, personalised domiciliary care in Medway and Kent. Managed by Registered Nurses with NHS experience.',
     images: ['/og-image.jpg'],
   },
   robots: {

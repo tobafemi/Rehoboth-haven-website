@@ -96,7 +96,7 @@ export async function POST(request: NextRequest) {
               <p><strong>Rehoboth Haven Care</strong></p>
               <p>99 Academy Drive, ME7 3EG, Gillingham</p>
               <p>Email: <a href="mailto:rehobothaven@gmail.com">rehobothaven@gmail.com</a> | Phone: <a href="tel:07883669445">07883 669445</a></p>
-              <p style="margin-top: 10px;">Nurse-led domiciliary care in Medway and Kent | CQC Registered</p>
+              <p style="margin-top: 10px;">Nurse-led domiciliary care in Medway and Kent | CQC Registration Pending</p>
             </div>
           </div>
         `,

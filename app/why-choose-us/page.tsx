@@ -4,7 +4,7 @@ import { generatePageSEO } from '@/lib/seo'
 
 export const metadata: Metadata = generatePageSEO({
   title: 'Why Choose Rehoboth Haven | Nurse-Led Home Care in Medway & Kent',
-  description: 'Learn about Rehoboth Haven\'s nurse-led approach, founders\' story, and what makes us different. CQC registered domiciliary care in Medway and Kent.',
+  description: 'Learn about Rehoboth Haven\'s nurse-led approach, founders\' story, and what makes us different. Domiciliary care in Medway and Kent.',
   path: '/why-choose-us',
 })
 
@@ -56,8 +56,8 @@ const differentiators = [
     ),
   },
   {
-    title: 'CQC Registered',
-    description: 'Fully registered with the Care Quality Commission and committed to maintaining the highest standards of domiciliary care.',
+    title: 'CQC Registration Pending',
+    description: 'We have submitted our application to the Care Quality Commission and are awaiting registration approval. We operate to CQC standards and are committed to maintaining the highest standards of domiciliary care.',
     icon: (
       <svg className="h-8 w-8" fill="none" viewBox="0 0 24 24" strokeWidth="1.5" stroke="currentColor">
         <path strokeLinecap="round" strokeLinejoin="round" d="M9 12.75L11.25 15 15 9.75m-3-7.036A11.959 11.959 0 013.598 6 11.99 11.99 0 003 9.749c0 5.592 3.824 10.29 9 11.623 5.176-1.332 9-6.03 9-11.622 0-1.31-.21-2.571-.598-3.751h-.152c-3.196 0-6.1-1.248-8.25-3.285z" />
@@ -196,16 +196,15 @@ export default function WhyChooseUsPage() {
           <div className="rounded-lg bg-primary/5 p-8">
             <div className="grid gap-8 lg:grid-cols-2">
               <div>
-                <h2 className="text-3xl font-bold text-foreground mb-4">CQC Registered</h2>
+                <h2 className="text-3xl font-bold text-foreground mb-4">CQC Registration Pending</h2>
                 <p className="text-lg text-muted-foreground mb-4">
-                  Rehoboth Haven is fully registered with the Care Quality Commission (CQC), 
-                  the independent regulator of health and social care in England.
+                  Rehoboth Haven has submitted our application for registration with the Care Quality Commission (CQC), 
+                  the independent regulator of health and social care in England. We are expecting a positive response shortly.
                 </p>
                 <p className="text-muted-foreground mb-6">
-                  We maintain the highest standards of domiciliary care and compliance, regularly reviewed 
-                  by the CQC to ensure we meet all regulatory requirements. Our commitment to quality care 
-                  is demonstrated through our ongoing compliance and continuous improvement. Our nurse-led 
-                  approach ensures that clinical governance and patient safety are at the forefront of 
+                  We are operating to CQC standards throughout our application process and are committed to maintaining 
+                  the highest standards of domiciliary care. Our commitment to quality care is demonstrated through our 
+                  nurse-led approach, which ensures that clinical governance and patient safety are at the forefront of 
                   everything we do.
                 </p>
                 <Link
@@ -220,7 +219,7 @@ export default function WhyChooseUsPage() {
                   <svg className="h-16 w-16 text-primary mx-auto mb-4" fill="none" viewBox="0 0 24 24" strokeWidth="1.5" stroke="currentColor">
                     <path strokeLinecap="round" strokeLinejoin="round" d="M9 12.75L11.25 15 15 9.75m-3-7.036A11.959 11.959 0 013.598 6 11.99 11.99 0 003 9.749c0 5.592 3.824 10.29 9 11.623 5.176-1.332 9-6.03 9-11.622 0-1.31-.21-2.571-.598-3.751h-.152c-3.196 0-6.1-1.248-8.25-3.285z" />
                   </svg>
-                  <p className="text-sm font-semibold text-foreground">CQC Registered</p>
+                  <p className="text-sm font-semibold text-foreground">CQC Registration Pending</p>
                   <p className="text-xs text-muted-foreground mt-2">Care Quality Commission</p>
                 </div>
               </div>

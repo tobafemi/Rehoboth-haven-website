@@ -49,7 +49,7 @@ export default function Footer() {
             <div>
               <h3 className="text-lg font-semibold">Rehoboth Haven Care</h3>
               <p className="mt-4 text-base text-gray-300">
-                Nurse-led domiciliary care in Medway and Kent. Providing compassionate, professional home care managed by Registered Nurses. CQC registered.
+                Nurse-led domiciliary care in Medway and Kent. Providing compassionate, professional home care managed by Registered Nurses. CQC registration pending.
               </p>
             </div>
             <div className="space-y-4">
@@ -148,7 +148,7 @@ export default function Footer() {
         </div>
         <div className="mt-12 border-t border-primary pt-8">
           <p className="text-base text-gray-300 xl:text-center">
-            &copy; {currentYear} Rehoboth Haven Care. All rights reserved. | CQC Registered
+            &copy; {currentYear} Rehoboth Haven Care. All rights reserved. | CQC Registration Pending
           </p>
         </div>
       </div>
