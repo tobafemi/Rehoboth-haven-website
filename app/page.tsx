@@ -6,6 +6,7 @@ import { localBusinessSchema } from '@/lib/schema'
 import RequestConsultationForm from '@/components/RequestConsultationForm'
 import Testimonials from '@/components/Testimonials'
 import ServiceCardHome from '@/components/ServiceCardHome'
+import CQCRegulatedServicesDisclaimer from '@/components/CQCRegulatedServicesDisclaimer'
 
 export const metadata: Metadata = generatePageSEO({
   title: 'Rehoboth Haven Care: Nurse-Led Home Care in Medway & Kent',
@@ -203,6 +204,11 @@ export default function HomePage() {
             <p className="mt-4 text-lg text-muted-foreground">
               Comprehensive domiciliary care tailored to individual needs in the comfort of your own home
             </p>
+          </div>
+
+          {/* Legal Disclaimer */}
+          <div className="mb-8">
+            <CQCRegulatedServicesDisclaimer />
           </div>
 
           <div className="grid gap-8 md:grid-cols-2 lg:grid-cols-3">

@@ -202,9 +202,9 @@ export default function WhyChooseUsPage() {
                   the independent regulator of health and social care in England. We are expecting a positive response shortly.
                 </p>
                 <p className="text-muted-foreground mb-6">
-                  We are operating to CQC standards throughout our application process and are committed to maintaining 
-                  the highest standards of domiciliary care. Our commitment to quality care is demonstrated through our 
-                  nurse-led approach, which ensures that clinical governance and patient safety are at the forefront of 
+                  We have designed our service to meet CQC standards and are committed to maintaining 
+                  the highest standards of domiciliary care once registered. Our commitment to quality care is demonstrated through our 
+                  nurse-led approach, which will ensure that clinical governance and patient safety are at the forefront of 
                   everything we do.
                 </p>
                 <Link

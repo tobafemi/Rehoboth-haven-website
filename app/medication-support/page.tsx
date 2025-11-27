@@ -2,6 +2,7 @@ import type { Metadata } from 'next'
 import Link from 'next/link'
 import { generatePageSEO } from '@/lib/seo'
 import RequestConsultationForm from '@/components/RequestConsultationForm'
+import CQCRegulatedServicesDisclaimer from '@/components/CQCRegulatedServicesDisclaimer'
 
 export const metadata: Metadata = generatePageSEO({
   title: 'Medication Support at Home in Medway & Kent | Rehoboth Haven',
@@ -23,6 +24,9 @@ export default function MedicationSupportPage() {
           </div>
         </div>
       </section>
+
+      {/* Legal Disclaimer */}
+      <CQCRegulatedServicesDisclaimer />
 
       <section className="py-16">
         <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">

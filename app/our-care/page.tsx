@@ -2,6 +2,7 @@ import type { Metadata } from 'next'
 import Link from 'next/link'
 import { generatePageSEO } from '@/lib/seo'
 import ServiceCard from '@/components/ServiceCard'
+import CQCRegulatedServicesDisclaimer from '@/components/CQCRegulatedServicesDisclaimer'
 
 export const metadata: Metadata = generatePageSEO({
   title: 'Our Home Care Services | Domiciliary Care in Medway & Kent',
@@ -103,6 +104,9 @@ export default function OurCarePage() {
           </div>
         </div>
       </section>
+
+      {/* Legal Disclaimer */}
+      <CQCRegulatedServicesDisclaimer />
 
       {/* Care Services */}
       <section className="py-16">

@@ -3,6 +3,7 @@ import Link from 'next/link'
 import { generatePageSEO } from '@/lib/seo'
 import RequestConsultationForm from '@/components/RequestConsultationForm'
 import Testimonials from '@/components/Testimonials'
+import CQCRegulatedServicesDisclaimer from '@/components/CQCRegulatedServicesDisclaimer'
 
 export const metadata: Metadata = generatePageSEO({
   title: 'Dementia Care at Home in Medway & Kent | Specialized Memory Care',
@@ -43,6 +44,9 @@ export default function DementiaCarePage() {
           </div>
         </div>
       </section>
+
+      {/* Legal Disclaimer */}
+      <CQCRegulatedServicesDisclaimer />
 
       {/* Main Content */}
       <section className="py-16">
