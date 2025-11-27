@@ -277,7 +277,7 @@ export default function BlogPostPage() {
 
             <div className="bg-primary/5 border-l-4 border-primary rounded-r-lg p-5 my-8">
               <p className="mb-0 text-foreground">
-                <strong>💬 We're here to help:</strong> This can feel confusing, which is why many families put it off. At Rehoboth Haven we are always happy to explain each step and signpost you to the right forms and phone numbers.
+                <strong>💬 We&apos;re here to help:</strong> This can feel confusing, which is why many families put it off. At Rehoboth Haven we are always happy to explain each step and signpost you to the right forms and phone numbers.
               </p>
             </div>
 
