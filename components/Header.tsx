@@ -24,7 +24,6 @@ const navigation = [
     href: '/blogs',
     children: [
       { name: 'Can I Afford In-Home Care in Kent?', href: '/blogs/can-i-afford-in-home-care-kent-cost-guide-2025' },
-      { name: 'Home Care vs. Care Homes', href: '/blogs/home-care-vs-care-homes-kent-comparison' },
       { name: 'What Is Included in In-Home Care?', href: '/blogs/what-is-included-in-home-care-kent-guide' },
       { name: 'How to Get Home Care Funding', href: '/blogs/how-to-get-home-care-funding-kent-step-by-step' },
       { name: 'Signs Your Loved One Needs Home Care', href: '/blogs/signs-loved-one-needs-home-care-red-flags' },

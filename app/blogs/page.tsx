@@ -16,51 +16,43 @@ const blogPosts = [
     excerpt: 'Understanding the costs of in-home care in Kent and exploring funding options available to families.',
     category: 'Funding & Costs',
     date: '2025-01-15',
+    readTime: '5 min read',
+  },
+  {
+    title: 'What Is Included in Home Care? A Clear Guide for Kent Families',
+    slug: 'what-is-included-in-home-care-kent-guide',
+    excerpt: 'Discover what in-home care really involves. Learn about personal care, medication support, companionship, and more services available to Kent families.',
+    category: 'Care Services',
+    date: '2025-01-05',
+    readTime: '6 min read',
+  },
+  {
+    title: 'How to Get Help Paying for Home Care in Kent',
+    slug: 'how-to-get-home-care-funding-kent-step-by-step',
+    excerpt: 'A simple guide to navigating home care funding in Kent. Learn about care assessments, financial assessments, benefits, and NHS Continuing Healthcare.',
+    category: 'Funding & Costs',
+    date: '2024-12-28',
     readTime: '8 min read',
   },
   {
-    title: 'Home Care vs. Care Homes in Kent: Which Is Right for Your Family?',
-    slug: 'home-care-vs-care-homes-kent-comparison',
-    excerpt: 'A comprehensive comparison to help families make informed decisions about care options in Kent.',
-    category: 'Care Options',
-    date: '2025-01-10',
-    readTime: '10 min read',
-  },
-  {
-    title: 'What Is Included in In-Home Care? (Kent Families\' Guide)',
-    slug: 'what-is-included-in-home-care-kent-guide',
-    excerpt: 'Discover what services are typically included in domiciliary care packages and how they can support your loved one.',
-    category: 'Care Services',
-    date: '2025-01-05',
+    title: 'How Do I Know If My Loved One Needs Home Care? Signs Kent Families Should Look For',
+    slug: 'signs-loved-one-needs-home-care-red-flags',
+    excerpt: 'Gentle signs to look for when considering home care. Learn about changes in personal care, medication, home environment, and emotional wellbeing.',
+    category: 'Care Planning',
+    date: '2024-12-20',
     readTime: '7 min read',
   },
   {
-    title: 'How to Get Home Care Funding in Kent: Step-by-Step Guide',
-    slug: 'how-to-get-home-care-funding-kent-step-by-step',
-    excerpt: 'Navigate the funding process for home care in Kent with our detailed step-by-step guide.',
-    category: 'Funding & Costs',
-    date: '2024-12-28',
-    readTime: '12 min read',
-  },
-  {
-    title: 'Signs Your Loved One Needs Home Care: 12 Red Flags Kent Families Shouldn\'t Ignore',
-    slug: 'signs-loved-one-needs-home-care-red-flags',
-    excerpt: 'Recognize the early warning signs that indicate your loved one may benefit from professional home care support.',
-    category: 'Care Planning',
-    date: '2024-12-20',
-    readTime: '9 min read',
-  },
-  {
-    title: 'What Does a Caregiver Do? A Day in the Life of a Rehoboth Haven Carer',
+    title: 'A Day in the Life of a Rehoboth Haven Caregiver',
     slug: 'what-does-caregiver-do-day-in-life-rehoboth-haven-carer',
-    excerpt: 'Get an inside look at what our carers do and how they make a difference in the lives of those they support.',
+    excerpt: 'Get an inside look at what our carers do throughout the day. See how they bring warmth, patience and respect into every home they visit in Kent.',
     category: 'Our Team',
     date: '2024-12-15',
-    readTime: '6 min read',
+    readTime: '7 min read',
   },
 ]
 
-const categories = ['All', 'Funding & Costs', 'Care Options', 'Care Services', 'Care Planning', 'Our Team']
+const categories = ['All', 'Funding & Costs', 'Care Services', 'Care Planning', 'Our Team']
 
 export default function BlogsPage() {
   return (
