@@ -32,8 +32,8 @@ export async function POST(request: NextRequest) {
 
     // Send email to your business email
     const { data, error } = await resend.emails.send({
-      from: 'Rehoboth Haven <onboarding@resend.dev>', // Update this with your verified domain
-      to: ['tobiobafemi18@gmail.com'], // Temporary: using your email for testing. Change back to rehobothaven@gmail.com after domain verification
+      from: 'Rehoboth Haven <Team@rehobothaven.com>', // Using verified domain
+      to: ['rehobothaven@gmail.com'], // Consultation requests go here
       subject: `New Consultation Request from ${name}`,
       html: `
         <div style="font-family: Arial, sans-serif; max-width: 600px; margin: 0 auto;">
@@ -68,7 +68,7 @@ export async function POST(request: NextRequest) {
     // Optional: Send confirmation email to the user
     try {
       await resend.emails.send({
-        from: 'Rehoboth Haven <onboarding@resend.dev>', // Update this with your verified domain
+        from: 'Rehoboth Haven <Team@rehobothaven.com>', // Using verified domain
         to: [email],
         subject: 'Thank you for your consultation request - Rehoboth Haven Care',
         html: `
